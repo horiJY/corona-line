@@ -1,5 +1,7 @@
 package com.jy.coronaline.controller;
 
+import com.jy.coronaline.constant.PlaceType;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -10,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AdminController {
 
     @GetMapping("/places")
-    public String adminPlaces() {
+    public String adminPlaces(PlaceType placeType) {
         return "admin/places";
     }
 
